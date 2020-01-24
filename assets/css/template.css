@@ -1,11 +1,13 @@
 /*font*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
+*{
+    font-family: 'Open Sans', sans-serif;
+}
 /*retirando os espaçamentos padrões do css*/
 body{
     margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    padding: 0;   
 }
 
 /*ESTILIZANDO O CABEÇALHO*/
@@ -17,7 +19,6 @@ header{
 
 .container{
     width: 990px;
-    height: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -58,9 +59,98 @@ nav .active a, nav a:hover{ /*Deixando um link ativo e inserindo o hover nos out
 /*BANNER*/
 
 #banner{
+    display: flex;
+    justify-content: center; /*centrelizar o conteudo do banner*/
     background-image: url('../img/img1.jpg');
     background-repeat: no-repeat; /*para não repetir*/
     background-position: center; /*deixando a imagem centralizada*/
     background-size: cover; /*imagem vai expandir para preencher todo o espaço da div*/
     height: 670px;
+}
+
+.column{ /*O que tiver dentro dessadiv vai seguir o alinhamento de coluna*/
+    flex-direction: column;
+}
+
+.banner_headline{
+    flex:1;
+    display:flex; /*centralizando os itens na div*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*FONTS*/
+.banner_headline h1{
+    color: #ffffff;
+    font-size: 70px;
+    text-shadow: 1px 1px 0px #000000;
+    margin:0px;
+    padding:0px;
+    max-width: 350px;
+}
+
+.banner_headline h2{
+    color: #ffffff;
+    font-size: 19px;
+    text-shadow: 1px 1px 0px #000000;
+    margin:0px;
+    padding:0px;
+    margin-top: 30px;
+    max-width: 350px;
+}
+
+.banner_options{
+    height: 210px;
+    display: flex;
+}
+
+/*Divs do banner options*/
+
+.banner-01, .banner-02, .banner-03{
+    flex:1;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.banner-01{
+    background-color: #39aae1;
+}
+.banner-02{
+    background-color: #0079c7;
+}
+.banner-03{
+    background-color: #2b4c99;
+}
+
+.banner-title{
+    font-size: 22px;
+}
+
+.banner-desc{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.banner_options a{
+    display: inline-block;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.banner-hours{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+}
+
+/*AREA NOTICIAS*/
+
+#noticias{
+    display: flex;
+    justify-content: center;
 }
