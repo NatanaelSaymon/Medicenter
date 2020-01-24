@@ -146,6 +146,8 @@ nav .active a, nav a:hover{ /*Deixando um link ativo e inserindo o hover nos out
     color: #ffffff;
     font-size: 13px;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*AREA NOTICIAS*/
@@ -153,4 +155,30 @@ nav .active a, nav a:hover{ /*Deixando um link ativo e inserindo o hover nos out
 #noticias{
     display: flex;
     justify-content: center;
+}
+
+#noticias section{
+    flex:2;
+}
+
+#noticias aside{
+    flex:1;
+}
+
+.widget_title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.widget_title_text{
+    color: #000000;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.widget_title_bar{
+    width: 50px;
+    height: 2px;
+    background-color: #36a9e1;
+    margin-top: 10px;
 }
