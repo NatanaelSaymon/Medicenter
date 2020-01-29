@@ -1,13 +1,11 @@
 /*font*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-*{
-    font-family: 'Open Sans', sans-serif;
-}
 /*retirando os espaçamentos padrões do css*/
 body{
     margin: 0;
     padding: 0;   
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*ESTILIZANDO O CABEÇALHO*/
@@ -26,6 +24,20 @@ header{
 .logo{
     display:flex; /*centralizando os itens na div*/
     align-items: center;
+}
+
+.menuMobile{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.menuMobile-line{
+    height: 3px;
+    background-color: #39aae1;
 }
 
 .menu{
@@ -288,10 +300,77 @@ footer .widget_title_text{
 }
 
 .footer-copy{
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
     border-top: 1px solid #2c2c2c;
     height: 40px;
     color: #5c5c5c;
     line-height: 40px;
     font-size: 12px;
+}
+
+/*RESPONSIVO*/
+
+@media (max-width:600px){
+    .banner_headline{
+        padding: 20px;
+    }
+
+    .banner_headline h1{
+        font-size: 55px;
+    }
+
+    .banner_headline h2{
+        font-size: 17px;
+    }
+
+    .banner_options{
+        height: auto;
+        flex-direction: column;
+    }
+
+    #noticias{
+        margin-top: 100px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    #noticias section, #noticias aside{
+        padding: 20px;
+    }
+
+    .footer_banner{
+        flex-direction: column;
+    }
+
+    .footer_area{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header .container{
+        flex-direction: row;
+    }
+
+    nav ul{
+        flex-direction: column;
+        display: none; /*para não aparecer o menu*/
+    }
+
+    header {
+        height: auto;
+    }
+
+    .logo{
+        padding-left: 20px;
+    }
+
+    .menuMobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
